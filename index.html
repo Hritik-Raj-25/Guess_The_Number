@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>This is a Guess The Number Game.</h1>
+<h2>Open the CONSOLE to Participate!</h2>
+
+
+<script>
+
+setTimeout(() =>{
+
+    let randomNumber = Math.random() * 100;
+    randomNumber = Number.parseInt(randomNumber)
+    
+    let input;
+input = Number.parseInt(input)
+
+let score = 100;
+
+do {
+	score = score - 1 
+	input = prompt("Enter Your Selected Number : ")
+
+	if( input == randomNumber){
+		console.log(' CONGRATULATIONS You Have Guessed The Right Number!!!!!')
+		console.log(` You guessed the right number-${input} in ${100-score} chances and you have the score-${score}!!`)
+	}
+
+	else if(input <randomNumber){
+		console.log("Your Guessed number is SMALLER than the Actual Number!!!")
+	}
+	else if (input> randomNumber){
+		console.log("Your Guessed number is GREATER than the Actual Number!!!")
+	}
+    else(
+		console.log ("Select your number between 1 to 100")
+	)
+}while (input != randomNumber)
+},7000)
+
+
+</script>
+
+</body>
+</html>
